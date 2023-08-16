@@ -1,0 +1,32 @@
+/*
+ *{
+    margin: 0;
+    padding: 0;
+}
+*/
+
+
+h1{
+    color: red;
+    text-align: center;
+}
+
+h2{
+    color: green;
+}
+
+p{
+    color: #21c6b87c;
+}
+
+#etqAmarillo{
+    color: yellow;
+}
+
+#parrafito{
+    font-size: 20px;
+}
+
+.txtBlue{
+    color: blue;
+}
