@@ -5,7 +5,11 @@
 }
 */
 
+body{
+    background-color: antiquewhite;
+}
 
+/* Titulos */
 h1{
     color: red;
     text-align: center;
