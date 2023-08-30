@@ -30,8 +30,54 @@ div{
 
 #blue{
     background-color: blue;
+    width: 150 px;
+    /*transition: width 5s;*/
+    animation-name: change;
+    animation-duration: 6s;
+}
+
+@keyframes change{
+    0%{
+        background-color: blue;
+    }
+    25%{
+        background-color: rgb(0, 162, 255);
+    }
+    50%{
+        background-color: rgb(0, 247, 255);
+    }
+    75%{
+        background-color: rgb(0, 255, 132);
+    }
+    100%{
+        background-color: green;
+    }
+}
+
+#blue:hover{
+   /*width: 300px;*/
 }
 
 #red{
     background-color: red;
+}
+
+
+/* On screens that are 992px wide or less, the background color is blue */
+@media screen and (max-width: 992px) {
+    body {
+      background-color: blue;
+      color: white;
+    }
+    h1{
+        color: white;
+    }
+  }
+  
+  /* On screens that are 600px wide or less, the background color is olive */
+  @media screen and (max-width: 600px) {
+    body {
+      background-color: olive;
+      color: white;
+    }
 }
