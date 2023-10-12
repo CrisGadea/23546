@@ -166,14 +166,14 @@ while (opcion != 0) {
 // FUNCIONES
 // Son bloques de código que se ejecutarán cuando se llamen
 
-console.log("ANTES DE LA LLAMADA");
+/* console.log("ANTES DE LA LLAMADA");
 
-saludar();
+saludar(); */
 
-var num1 = Number(prompt("Ingrese un número"));
-var num2 = Number(prompt("Ingrese otro número"));
+/* var num1 = Number(prompt("Ingrese un número"));
+var num2 = Number(prompt("Ingrese otro número")); */
 
-console.log("El resultado de sumar ambos números es: " + sumar(num1,num2));
+/* console.log("El resultado de sumar ambos números es: " + sumar(num1,num2));
 
 console.log("DESPUES DE LA LLAMADA");
 
@@ -182,7 +182,7 @@ console.log("Suma final: " + sumar(sumar(12,12), 14));
 function saludar(){
     alert("HELLO WORLD!");
     console.log("Estoy saludando");
-}
+} */
 
 // CREAR LAS OPERACIONES BASICAS Y SOLICITAR AL USUARIO LOS VALORES
 // Y LA OPCION A EJECUTAR
@@ -190,4 +190,90 @@ function saludar(){
 function sumar(num1, num2) {
     return num1 + num2;
 }
+
+const resta = function (num1, num2){
+    return num1 - num2;
+}
+
+// Arrow Function
+// En caso de que la función tenga una sola línea, se omiten las llaves {}
+const resta2 = (num1, num2) => num1 - num2;
+
+// Sino:
+const resta3 = (num1, num2) => {
+    console.log("El valor del número 1 es: " + num1);
+    return num1 - num2;
+}
+
+// Declaracion de la funcion
+const multiplicar = (numero1, numero2, call) => {
+    let resultado = numero1 * numero2;
+    call(resultado);
+}
+
+// Ejecución de la función
+/* multiplicar(2,8,function resultado(res){
+    console.log("El resultado de la multiplicacion es: " + res);
+});
+
+multiplicar(2,8,function resultado(res){
+    alert("El resultado de la multiplicacion es: " + res);
+}); */
+
+
+
+// ENTRADA => PROCESO => SALIDA
+
+
+// Vamos a crear un array de nombres (Lista)
+/* const nombres = []; */
+
+/* nombres[0] = "Cristian";
+nombres[1] = "Florencia";
+nombres[2] = "Martin";
+nombres[4] = "Carlos"; */
+
+/* console.log("La cantidad de elementos del array nombres es: " + nombres.length)
+console.log(nombres[4]); */
+
+// Crear un array de numeros del 1 al 9
+
+/* const numeros = [];
+
+for (let i = 1; i < 10; i++) {
+    //console.log(numeros.push(i));
+    console.log(nombres.push("X" + i));
+}
+
+console.log(nombres) */
+
+// LISTA DE TAREAS
+var tareas = [];
+// Solicitar al usuario que vaya ingresando tareas a la lista de tareas
+// para poder luego mostrarlas
+do{
+    var opcion = Number(prompt("------------- Lista de Tareas -------------\n1. Ingresar Tarea\n2. Mostrar Lista de Tareas\n3.Salir"));
+
+    switch (opcion) {
+        case 1:
+            tareas.push(prompt("Ingrese una tarea"));
+        break;
+        case 2:
+            if (tareas.length == 0) {
+                alert("Ingrese una tarea para visualizar la lista");
+            } else{
+            tareas.forEach(tarea => {
+                alert("Tarea: "+ tarea);
+            })}
+        break;
+        case 3:
+            alert("Gracias por utilizar nuestra lista de tareas!");
+        break;
+        default:
+            alert("Elija una opción correcta!");
+            break;
+    }
+
+} while(opcion != 3);
+
 
