@@ -1,0 +1,39 @@
+h1{
+    position: sticky;
+}
+
+div {
+    background-color: aqua;
+    width: 150px;
+    height: 150px;
+    border: 1px solid;
+    margin: 15px;
+    padding: 5px;
+
+}
+
+#container{
+width: 500px;
+width: 500px;
+ text-align: center;
+ display: flex;
+ justify-content: center;
+align-content: center;
+align-items: center;
+
+}
+
+#red{
+    background-color: red;
+}
+#blue{
+    background-color: blue;
+    width: 150px;
+    transition: 3s;
+}
+#blue:hover{
+    width: 300px;
+}
+#green{
+    background-color: green;
+}
